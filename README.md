@@ -10,6 +10,13 @@ What do we require:
  - Support for code compatibility across different microcontrollers i.e. **code portability**
  - Optimized **production ready code**.
 
+We have to make sure this project is **SMART**.
+ - **Specific** - Able to generate final binary file from Python code.
+ - **Measurable** - 
+ - **Attainable** - This is something that I just wanted to do. We'll have to evaluate whether this is possible or not.
+ - **Relevant** - Super relevant. If implemented, people would be able to program embedded devices in all sorts of different languages, don't have to worry about code interoperability on different micrcocontrollers (ideally speaking).
+ - **Time Bound** - This looks like a really long project, but let's see how much can be done by **31st May, 2020**.
+
 ## Things that we've to explore
 Here are the list of things that are required to be explored to gauge the feasibility of the project:
 
