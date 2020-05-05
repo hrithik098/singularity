@@ -51,6 +51,11 @@ There are 4 steps:
 	 - **Static Linking** - linker makes a copy of all used library functions to the executable file.
 	 - **Dynamic Linking** - the code is not copied, it is done by just placing the name of the library in the binary file.
 
+Image showing steps of compilation:
+
+
+![enter image description here](/docs/imgs/steps-of-compilation.jpg)
+
 ### Stuff that microcontroller vendors provide us with
 
  - **Assembler** - Nobody knows the opcodes for a microcontroller other than the uC vendor. This is a must have.
