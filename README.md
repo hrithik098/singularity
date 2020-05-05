@@ -85,6 +85,9 @@ The absolute essential for writing code for a particular uC is the assembler.
 Here's the architecture for GNU Compiler Collection:
 ![enter image description here](/docs/imgs/gcc-arch.jpeg)
 
+## Abstraction
+What kind of abstraction can we use to make it simpler to understand and operate with a variety of microcontrollers?
+
 ## Resources
 Here are the list of resources that I consulted or find useful:
 
@@ -94,3 +97,4 @@ Here are the list of resources that I consulted or find useful:
  - [Using the GNU Compiler Collection (GCC) - 9.3.0](https://gcc.gnu.org/onlinedocs/gcc-9.3.0/gcc/)
  - [GCC online documentation - All Versions](https://gcc.gnu.org/onlinedocs/)
  - [GCC, the GNU Compiler Collection Software Page](https://www.gnu.org/software/gcc/)
+ - [Linuxtopia - An Introduction to GCC](https://www.linuxtopia.org/online_books/an_introduction_to_gcc/index.html)
