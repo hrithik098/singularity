@@ -1,3 +1,4 @@
+
 # Singularity
 A exploration towards writing code for microcontrollers in any language. Not just in C/C++.
 
@@ -90,3 +91,6 @@ Here are the list of resources that I consulted or find useful:
  - [Writing a C Compiler, Part 1 - Nora Sandler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
  - [How the Compilation Process works for C Programs](https://medium.com/datadriveninvestor/compilation-process-db17c3b58e62)
  - [Tutorials Point - Compiler Design](https://www.tutorialspoint.com/compiler_design/compiler_design_overview.htm)
+ - [Using the GNU Compiler Collection (GCC) - 9.3.0](https://gcc.gnu.org/onlinedocs/gcc-9.3.0/gcc/)
+ - [GCC online documentation - All Versions](https://gcc.gnu.org/onlinedocs/)
+ - [GCC, the GNU Compiler Collection Software Page](https://www.gnu.org/software/gcc/)
