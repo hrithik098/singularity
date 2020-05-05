@@ -55,6 +55,10 @@ There are 4 steps:
 
  - **Assembler** - Nobody knows the opcodes for a microcontroller other than the uC vendor. This is a must have.
 
+## GCC
+Here's the architecture for GNU Compiler Collection:
+![enter image description here](/docs/imgs/gcc-arch.jpeg)
+
 ## Resources
 Here are the list of resources that I consulted or find useful:
 
