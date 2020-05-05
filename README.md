@@ -41,24 +41,44 @@ Here are the list of things that are required to be explored to gauge the feasib
 ## C Code Compilation
 There are 4 steps:
 
- 1. **Preprocessing**
+ 1. **Preprocessing (uC independent)**
 	 - Removing comments
 	 - Expanding Macros
 	 - Expanding included files
- 2. **Compilation** - It takes the output of the preprocessor and generates assembly language, an intermediate human readable language, specific to the target processor.
- 3. **Assembler** - Assembly code in, pure binary code or machine code (zeros and ones) out. Also known as object code. Every microcontroller vendor must have a specific assembler for every microcontroller that they produce.
- 4. **Linker** - The linker merges all the object code from multiple modules into a single one. If we are using a function from libraries, linker will link our code with that library function code.
+	 - Works in language extension
+ 2. **Compilation (partially uC dependent)** - It takes the output of the preprocessor and generates assembly language, an intermediate human readable language, specific to the target processor.
+	 - Lexical Analyzer (uC independent)
+	 - Syntax Analyzer (uC independent)
+	 - Semantic Analyzer (uC independent)
+	 - Intermediate Code Generator (uC independent)
+	 - Machine Independent Code Optimiser (uC independent)
+	 - Code Generator (uC dependent, probably part of GCC backend)
+	 - Machine Dependent Code Optimiser (uC dependent, probably part of GCC backend)
+	 - Output: Machine Code (uC dependent, what are you waiting for? Flash this to your chip :smile: )
+ 3. **Assembler (uC dependent)** - Assembly code in, pure binary code or machine code (zeros and ones) out. Also known as object code. Every microcontroller vendor must have a specific assembler for every microcontroller that they produce.
+ 4. **Linker (unknown)** - The linker merges all the object code from multiple modules into a single one. If we are using a function from libraries, linker will link our code with that library function code.
 	 - **Static Linking** - linker makes a copy of all used library functions to the executable file.
 	 - **Dynamic Linking** - the code is not copied, it is done by just placing the name of the library in the binary file.
 
 Image showing steps of compilation:
 
-
 ![enter image description here](/docs/imgs/steps-of-compilation.jpg)
 
-### Stuff that microcontroller vendors provide us with
+Phases of compilation:
 
+![enter image description here](/docs/imgs/phases-of-compiler.jpg)
+
+### Stuff that microcontroller vendors provide us with (speculative)
+ - **Intermediate Code to Assembly Code Generator** - This part also has to be provided by the uC vendor. This will become the output of the compiler and would be the input to assembler.
+ - **Target Platform Assembly Code Optimizer** - For optimizing assembly code for target platform.
  - **Assembler** - Nobody knows the opcodes for a microcontroller other than the uC vendor. This is a must have.
+
+The absolute essential for writing code for a particular uC is the assembler.
+
+### Jargons
+
+ - **Cross Compilers** - A compiler that runs on platform (A) and is capable of generating executable code for platform (B) is called a cross-compiler. This is something that we need.
+ - **Source-to-source Compiler** - A compiler that takes the source code of one programming language and translates it into the source code of another programming language is called a source-to-source compiler. Also known as a transpiler. This might be helpful to create C code using Python, C++, Java code.
 
 ## GCC
 Here's the architecture for GNU Compiler Collection:
@@ -69,3 +89,4 @@ Here are the list of resources that I consulted or find useful:
 
  - [Writing a C Compiler, Part 1 - Nora Sandler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
  - [How the Compilation Process works for C Programs](https://medium.com/datadriveninvestor/compilation-process-db17c3b58e62)
+ - [Tutorials Point - Compiler Design](https://www.tutorialspoint.com/compiler_design/compiler_design_overview.htm)
