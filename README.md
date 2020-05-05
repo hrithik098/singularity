@@ -37,3 +37,26 @@ Here are the list of things that are required to be explored to gauge the feasib
 	 - Back End
  - **AVR GCC** - This thing (I don't really know what it is) provides us with the required libraries and header files to compile our C program to run on AVR microcontrollers. It makes use of GCC.
  - **Workings of a C Compiler** - Required for understanding how does a simple C program is compiled to generate the required machine code. (Very Interesting :P)
+
+## C Code Compilation
+There are 4 steps:
+
+ 1. **Preprocessing**
+	 - Removing comments
+	 - Expanding Macros
+	 - Expanding included files
+ 2. **Compilation** - It takes the output of the preprocessor and generates assembly language, an intermediate human readable language, specific to the target processor.
+ 3. **Assembler** - Assembly code in, pure binary code or machine code (zeros and ones) out. Also known as object code. Every microcontroller vendor must have a specific assembler for every microcontroller that they produce.
+ 4. **Linker** - The linker merges all the object code from multiple modules into a single one. If we are using a function from libraries, linker will link our code with that library function code.
+	 - **Static Linking** - linker makes a copy of all used library functions to the executable file.
+	 - **Dynamic Linking** - the code is not copied, it is done by just placing the name of the library in the binary file.
+
+### Stuff that microcontroller vendors provide us with
+
+ - **Assembler** - Nobody knows the opcodes for a microcontroller other than the uC vendor. This is a must have.
+
+## Resources
+Here are the list of resources that I consulted or find useful:
+
+ - [Writing a C Compiler, Part 1 - Nora Sandler](https://norasandler.com/2017/11/29/Write-a-Compiler.html)
+ - [How the Compilation Process works for C Programs](https://medium.com/datadriveninvestor/compilation-process-db17c3b58e62)
