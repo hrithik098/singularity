@@ -41,22 +41,22 @@ Here are the list of things that are required to be explored to gauge the feasib
 ## C Code Compilation
 There are 4 steps:
 
- 1. **Preprocessing**
+ 1. **Preprocessing (uC independent)**
 	 - Removing comments
 	 - Expanding Macros
 	 - Expanding included files
 	 - Works in language extension
- 2. **Compilation** - It takes the output of the preprocessor and generates assembly language, an intermediate human readable language, specific to the target processor.
-	 - Lexical Analyzer
-	 - Syntax Analyzer
-	 - Semantic Analyzer
-	 - Intermediate Code Generator
-	 - Machine Independent Code Optimiser
-	 - Code Generator
-	 - Machine Dependent Code Optimiser
-	 - Output: Machine Code 
- 3. **Assembler** - Assembly code in, pure binary code or machine code (zeros and ones) out. Also known as object code. Every microcontroller vendor must have a specific assembler for every microcontroller that they produce.
- 4. **Linker** - The linker merges all the object code from multiple modules into a single one. If we are using a function from libraries, linker will link our code with that library function code.
+ 2. **Compilation (partially uC dependent)** - It takes the output of the preprocessor and generates assembly language, an intermediate human readable language, specific to the target processor.
+	 - Lexical Analyzer (uC independent)
+	 - Syntax Analyzer (uC independent)
+	 - Semantic Analyzer (uC independent)
+	 - Intermediate Code Generator (uC independent)
+	 - Machine Independent Code Optimiser (uC independent)
+	 - Code Generator (uC dependent, probably part of GCC backend)
+	 - Machine Dependent Code Optimiser (uC dependent, probably part of GCC backend)
+	 - Output: Machine Code (uC dependent, what are you waiting for? Flash this to your chip :smile: )
+ 3. **Assembler (uC dependent)** - Assembly code in, pure binary code or machine code (zeros and ones) out. Also known as object code. Every microcontroller vendor must have a specific assembler for every microcontroller that they produce.
+ 4. **Linker (unknown)** - The linker merges all the object code from multiple modules into a single one. If we are using a function from libraries, linker will link our code with that library function code.
 	 - **Static Linking** - linker makes a copy of all used library functions to the executable file.
 	 - **Dynamic Linking** - the code is not copied, it is done by just placing the name of the library in the binary file.
 
