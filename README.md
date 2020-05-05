@@ -68,9 +68,12 @@ Phases of compilation:
 
 ![enter image description here](/docs/imgs/phases-of-compiler.jpg)
 
-### Stuff that microcontroller vendors provide us with
-
+### Stuff that microcontroller vendors provide us with (speculative)
+ - **Intermediate Code to Assembly Code Generator** - This part also has to be provided by the uC vendor. This will become the output of the compiler and would be the input to assembler.
+ - **Target Platform Assembly Code Optimizer** - For optimizing assembly code for target platform.
  - **Assembler** - Nobody knows the opcodes for a microcontroller other than the uC vendor. This is a must have.
+
+The absolute essential for writing code for a particular uC is the assembler.
 
 ### Jargons
 
