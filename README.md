@@ -88,6 +88,8 @@ Here's the architecture for GNU Compiler Collection:
 ## Abstraction
 What kind of abstraction can we use to make it simpler to understand and operate with a variety of microcontrollers?
 
+![8051 Microcontroller Architecture](/docs/imgs/8051-arch.png)
+
 ## Resources
 Here are the list of resources that I consulted or find useful:
 
