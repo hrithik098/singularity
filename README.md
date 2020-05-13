@@ -86,9 +86,15 @@ Here's the architecture for GNU Compiler Collection:
 ![enter image description here](/docs/imgs/gcc-arch.jpeg)
 
 ## Abstraction
-What kind of abstraction can we use to make it simpler to understand and operate with a variety of microcontrollers?
-
+This is the architecture of 8051 microcontroller:
 ![8051 Microcontroller Architecture](/docs/imgs/8051-arch.png)
+
+Abstractions required for:
+ 
+ - Flash Memory Abstraction
+ - Peripheral Abstraction
+ - Instruction Set Abstraction
+ - GPIO Port Abstraction
 
 ## Resources
 Here are the list of resources that I consulted or find useful:
