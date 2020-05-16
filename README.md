@@ -1,4 +1,5 @@
 
+
 # Singularity
 A exploration towards writing code for microcontrollers in any language. Not just in C/C++.
 
@@ -95,6 +96,41 @@ Abstractions required for:
  - Peripheral Abstraction
  - Instruction Set Abstraction
  - GPIO Port Abstraction
+
+## DX (Developer Experience)
+One line: It's should be an amazing experience while writing code for microcontrollers:
+
+Toggling GPIO pins
+
+```python
+import singularity
+
+pin = singularity.gpio(pin=21)
+pin.setMode("output")
+pin.on()
+pin.off()
+```
+
+Reading from ADC pins
+
+```python
+import singularity
+pin = singularity.gpio(pin=21)
+pin.setMode("input")
+pin.read()
+```
+
+Sub modules under **singularity** package.
+
+```python
+import singularity
+import singluarity.datatypes
+import singularity.peripherals
+import singularity.peripherals.uart
+import singularity.peripherals.i2c
+import singularity.peripherals.usart
+import singularity.peripherals.can
+```
 
 ## Resources
 Here are the list of resources that I consulted or find useful:
